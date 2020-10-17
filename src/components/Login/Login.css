@@ -1,0 +1,27 @@
+.login-form{
+    margin: 0 align;
+    text-align: center;
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    padding:50px;
+    margin-top: 30px;
+}
+
+.login-form h1{
+    margin-bottom:15px ;
+}
+
+.log-btn{
+     background-color: #FBD062;
+     height: 45px;
+width:350px;
+border-radius:25px;
+color: #000000;
+font-weight: bold;
+}
+
+.text{
+    margin-top:10px;
+}
