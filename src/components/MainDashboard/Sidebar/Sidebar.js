@@ -27,27 +27,11 @@ const Sidebar = () => {
             <img src={logo} alt="" className="img-fluid" />
           </Link>
         </li>
-            
-        <li>
-        <Link to="/dashboard/order">
-          <FontAwesomeIcon icon={faShoppingCart} />
-          <span>Order</span>
-        </Link>
-      </li>
-      <li>
-        <Link to="/dashboard/servicelist">
-          <FontAwesomeIcon icon={faServer} />
-          <span>Servicelist</span>
-        </Link>
-      </li>
-      <li>
-        <Link to="/dashboard/review">
-          <FontAwesomeIcon icon={faCheckSquare} />
-          <span>Review</span>
-        </Link>
-      </li>
-
-            <li>
+           
+        {
+          loggedInUser.checkAdmin ? <div>
+          
+          <li>
               <Link to="/dashboard/serviceeess">
                 <FontAwesomeIcon icon={faServer} />
                 <span>Service List</span>
@@ -65,35 +49,32 @@ const Sidebar = () => {
                 <span>Make Admin</span>
               </Link>
             </li>
-      
- 
-      
-      
+          
+                      </div> : <div>
+                      <li>
+                      <Link to="/dashboard/order">
+                        <FontAwesomeIcon icon={faShoppingCart} />
+                        <span>Order</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/dashboard/servicelist">
+                        <FontAwesomeIcon icon={faServer} />
+                        <span>Servicelist</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/dashboard/review">
+                        <FontAwesomeIcon icon={faCheckSquare} />
+                        <span>Review</span>
+                      </Link>
+                    </li>
+                        </div>
+         } 
+
          </ul>
     </div>
   );
 };
 
 export default Sidebar;
-
-
-// <div>
-//             <li>
-//               <Link to="/dashboard/order">
-//                 <FontAwesomeIcon icon={faShoppingCart} />
-//                 <span>Order</span>
-//               </Link>
-//             </li>
-//             <li>
-//               <Link to="/dashboard/servicelist">
-//                 <FontAwesomeIcon icon={faServer} />
-//                 <span>Servicelist</span>
-//               </Link>
-//             </li>
-//             <li>
-//               <Link to="/dashboard/review">
-//                 <FontAwesomeIcon icon={faCheckSquare} />
-//                 <span>Review</span>
-//               </Link>
-//             </li>
-//           </div>

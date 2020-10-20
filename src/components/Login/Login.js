@@ -31,7 +31,7 @@ const Login = () => {
         )
           .then((response) => response.json())
           .then((data) => {
-            if (data) {
+            if (data.length==1) {
               const signedInUser = {
                 checkAdmin: true,
                 name: displayName,
@@ -60,34 +60,8 @@ const Login = () => {
       });
   };
 
-  // const handleSignIn = () => {
-  //     if (firebase.apps.length===0) {
-  //         firebase.initializeApp(firebaseConfig);
-  //     }
-  //     var provider = new firebase.auth.GoogleAuthProvider();
-  //     firebase.auth().signInWithPopup(provider).then(function(result) {
-  //         const { displayName, email, photoURL } = result.user;
+ 
 
-  //         const signedInUser = {
-  //             isSignedIn: true,
-  //             name: displayName,
-  //             email: email,
-  //             image:photoURL,
-  //         }
-  //         setLoggedInUser(signedInUser);
-  //         history.replace(from);
-  //     }).catch(function(error) {
-  //         var errorCode = error.code;
-  //         var errorMessage = error.message;
-
-  //         var email = error.email;
-
-  //         var credential = error.credential;
-
-  //     });
-  //     console.log(loggedInUser.image);
-
-  // }
   return (
     <section style={{ paddingTop: "60px" }}>
       <div className="row">
@@ -109,61 +83,3 @@ const Login = () => {
 };
 
 export default Login;
-
-// const handleSignIn = () => {
-//     if (firebase.apps.length===0) {
-//         firebase.initializeApp(firebaseConfig);
-//     }
-//     var provider = new firebase.auth.GoogleAuthProvider();
-//     firebase.auth().signInWithPopup(provider).then(function(result) {
-//         const { displayName, email, photoURL } = result.user;
-
-//         const signedInUser = {
-//             isSignedIn: true,
-//             name: displayName,
-//             email: email,
-//             image:photoURL,
-//         }
-//         setLoggedInUser(signedInUser);
-//         history.replace(from);
-//       }).catch(function(error) {
-//         var errorCode = error.code;
-//         var errorMessage = error.message;
-
-//         var email = error.email;
-
-//         var credential = error.credential;
-
-//       });
-//     console.log(loggedInUser.image);
-
-// }
-
-// const handleSignIn = () => {
-//     if (firebase.apps.length===0) {
-//         firebase.initializeApp(firebaseConfig);
-//     }
-//     var provider = new firebase.auth.GoogleAuthProvider();
-//     firebase.auth().signInWithPopup(provider).then(function(result) {
-//         const { displayName, email, photoURL } = result.user;
-
-//         const signedInUser = {
-//             isSignedIn: true,
-//             name: displayName,
-//             email: email,
-//             image:photoURL,
-//         }
-//         setLoggedInUser(signedInUser);
-//         history.replace(from);
-//       }).catch(function(error) {
-//         var errorCode = error.code;
-//         var errorMessage = error.message;
-
-//         var email = error.email;
-
-//         var credential = error.credential;
-
-//       });
-//     console.log(loggedInUser.image);
-
-// }

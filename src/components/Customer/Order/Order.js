@@ -17,12 +17,12 @@ const Order = () => {
     newInfo[e.target.name] = e.target.value;
     setInfo(newInfo);
   };
-  console.log(info);
+
   const handleFileChange = (e) => {
     const newFile = e.target.files[0];
     setFile(newFile);
   };
-  console.log(file);
+ 
 
   const handleSubmit = (e, data) => {
     const formData = new FormData();

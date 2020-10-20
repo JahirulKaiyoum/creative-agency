@@ -32,7 +32,7 @@ const AddService = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        // history.push('/');
+         history.push('/home');
         console.log(data);
       })
       .catch((error) => {
@@ -103,62 +103,3 @@ const AddService = () => {
 };
 
 export default AddService;
-
-// <form className="p-5" onSubmit={handleSubmit(onSubmit)}>
-//                 <div className="form-group row">
-//                     <div className=" col form-group">
-//                         <label for="service">Service</label>
-//                         <input type="text"  name="service" id="service" placeholder="Service title" className="form-control" />
-//                     </div>
-//                     <div className="col form-group">
-//                         <label for="description">Description</label>
-//                         <input type="file"  name="file" id="file" placeholder="Description" className="form-control" />
-//                         </div>
-//                         </div>
-//                     <div className="form-group">
-//                         <label for="icon">Icon</label>
-//                         <input type="text"  id="icon" name="description" placeholder="Description" className="form-control" />
-//                     </div>
-
-//                     <div className="form-group text-left">
-//                         <button type="submit" className="b">Submit</button>
-//                     </div>
-
-//             </form>
-
-// const [info, setInfo] = useState({});
-//     const [file, setFile] = useState(null);
-
-//     const handleBlur = (e) => {
-//         const newInfo = { ...info };
-//         newInfo[e.target.name] = e.target.value;
-//         setInfo(newInfo);
-//     }
-//     // console.log(info);
-//     const handleFileChange = (e) => {
-//         const newFile = e.target.files[0];
-//         setFile(newFile);
-//     }
-//     const handleSubmit = (e, data) => {
-
-//         const formData = new FormData()
-//         e.preventDefault();
-//         formData.append('file', file);
-//         formData.append('service', info.service)
-//         formData.append('projectDetails', info.projectDetails);
-//         fetch('https://mysterious-ocean-37435.herokuapp.com/addService', {
-//             method: 'POST',
-//             body: formData
-//         })
-//         .then(response => response.json())
-//         .then(data => {
-//             history.push('/customerDashboard/orderlist');
-//         })
-//         .catch(error => {
-//             console.error(error)
-//         })
-// };
-
-// <label for="service">Service</label>
-//<label for="icon">Icon</label>
-//<label for="description">Description</label>

@@ -1,4 +1,5 @@
 import React from 'react';
+import Order from '../../Customer/Order/Order';
 import Orderlist from '../../Customer/Orderlist/Orderlist';
 import Sidebar from '../Sidebar/Sidebar';
 
@@ -15,7 +16,7 @@ const AllOrderList = () => {
                 </div>
                
                 <div className="col-md-10">
-                 <Orderlist></Orderlist>
+                 <Order></Order>
                 </div>
             </div>
         </section>

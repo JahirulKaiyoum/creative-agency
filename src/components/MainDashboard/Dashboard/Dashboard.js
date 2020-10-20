@@ -1,27 +1,28 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { UserContext } from '../../../App';
 import Order from '../../Customer/Order/Order';
+import AllOrderList from '../AllOrderList/AllOrderList';
+import AllServicesList from '../AllServicesList/AllServicesList';
 import Sidebar from '../Sidebar/Sidebar';
 
 const Dashboard = () => {
-
+    const { loggedInUser } = useContext(UserContext);
 
     const containerStyle = {
         backgroundColor: "#F4FDFB",
         height:"100%"
     }
     return (
-        <section>
-            <div style={containerStyle} className="container-fluid row">
-                <div className="col-md-2">
-                    <Sidebar></Sidebar>
-                </div>
-               
-                <div className="col-md-10">
-                   <Order></Order>
-                </div>
-            </div>
-        </section>
+    
+       
+        <>
+            {
+                loggedInUser.checkAdmin ? <AllServicesList /> : <AllOrderList/>
+            }
+        </>
+
     );
 };
 
 export default Dashboard;
+
